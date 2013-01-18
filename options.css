@@ -1,0 +1,37 @@
+body { font-family: Arial, sans-serif; font-size: 13px; }
+a:link { color: #202060; text-decoration: none; }
+a:visited { color: #202060; text-decoration: none; }
+a:active { color: #60609F; text-decoration: none; }
+a:hover { color: #303050; text-decoration: none; }
+
+img#logo { width: 67px; height: 67px; vertical-align: middle; }
+div#header { vertical-align: middle; position: relative; }
+span#title { margin-left: 5px; font-weight: bold; vertical-align: middle; font-size: 14.5pt; }
+div#trace { width: 100%; position: absolute; bottom: 0px; text-align: center; color: #AA0000; }
+
+div#separator { margin-top: 12px; background-color: #EBEFF9; border-top: 1px solid #9CC2EF; }
+div#sep_left { font-weight: bold; padding: 5px; display: inline-block; }
+div#sep_right { float: right; display: inline-block; }
+
+div#contents { padding: 5px; text-align: center; }
+
+
+/*** options items ***/
+#options { border: 1px solid #CCCCCC; width: 80%; margin:  10px auto; background-color: #EEEEEE; padding: 10px; }
+.optionGroup { padding: 5px; }
+
+/*** clean buttons ***/
+div.btn { border: 2px solid #CCCCCC; width: 200px; margin: 5px auto; padding: 3px; -webkit-border-radius: 10px; cursor: default; text-align: center; display: inline-block; vertical-align: bottom; }
+div.btnHeader { text-align: center; font-size: 14px; }
+div.btnDetails { text-align: center; color: #CCCCCC; font-size: 12px; display: none; }
+div#cleanBtn { text-align: center; display: inline-block; padding: 2px; }
+div#cleanBtn img { width: 20px; height: 20px; }
+div#enableBtn { text-align: center; display: inline-block; padding: 2px; }
+div#enableBtn img { width: 20px; height: 20px; }
+
+#notifyOptions { background-color: #DDD; display: inline-block; }
+#notifyOptions:hover { background-color: #E6E6E6; }
+#notifyOptionsSmall { color: #555555; }
+
+/*** notify Ad ***/
+div#notifyAd { display: none; width: 500px; margin: 5px auto; text-align: center; background-color: #EEEEEE; border: 1px solid #CCCCCC; padding: 5px; margin-top: 20px; }

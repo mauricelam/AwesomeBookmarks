@@ -1,0 +1,47 @@
+{
+  "name": "Awesome Bookmarks",
+  "version": "1.15",
+  "manifest_version": 2,
+  "description": "Let you quickly search through your bookmarks in a floating bookmarks bar. It can even show notifications with no.tify. ",
+  "background": {
+    "scripts": [
+      "include/js/jquery-1.9.0.min.js",
+      "js/notifyname.js",
+      "js/pref.js",
+      "js/counter.js",
+      "js/bookmarks.js",
+      "js/namechange.js",
+      "js/events.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/favicon.png",
+    "48": "images/icon_48.png"
+  },
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLF1dV//2tPP8ePXmaNG8ouWVVb/LPv3XIAEBaXFuEiThCfFFG0JehwJFCJxsAjmGcAqZKl8uXOSpCfQsZ8lRfM9tN88nvYvb5wGIMS0RCDclBamEQ3qKmoioFTsQItrrpLcnfYcNr6aWskApWrm867kIX+0xiWqflvUFHegH/5QIDAQAB",
+  "browser_action": {
+    "default_icon": "images/popup.png",
+    "default_title": "Awesome Bookmarks",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Alt+B",
+        "linux": "Ctrl+Alt+B",
+        "chromeos": "Ctrl+Alt+B",
+        "mac": "Ctrl+B"
+      }
+    }
+  },
+  "permissions": [
+    "chrome://favicon/",
+    "tabs",
+    "bookmarks",
+    "contextMenus"
+  ]
+}
+

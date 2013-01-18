@@ -1,0 +1,22 @@
+<!-- vim:set shiftwidth=2 tabstop=2 expandtab syntax:htmldjango: -->
+<html>
+  <head>
+    <title>Edit Bookmarks</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css" />
+    <script type="text/javascript" src="include/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="dialog.js"></script>
+  </head>
+  <body>
+    <div id="bmInfo">
+      <div id="bmTitle" class="infoWrap"><span>Name: </span><input type="text" id="bmTitleBox" class="infoBox" /></div>
+      <div id="bmUrl" class="infoWrap"><span>URL: </span><input type="text" id="bmUrlBox" class="infoBox" /></div>
+    </div>
+    <div id="toolbar">
+      <img src="images/delete.png" id="deleteBtn" class="toolBtn" title="Delete Bookmark" alt="Delete Bookmark" />
+      <img src="images/manager.png" id="managerBtn" class="toolBtn" title="Bookmarks Manager" alt="Bookmarks Manager" />
+
+      <button id="cancelBtn" class="toolBtn right">Cancel</button>
+      <button id="okBtn" class="toolBtn right">OK</button>
+    </div>
+  </body>
+</html>

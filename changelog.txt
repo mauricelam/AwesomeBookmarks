@@ -1,0 +1,57 @@
+1.1
+Added ability to press enter to go to the first link in the bookmarks popup
+Fixed a crucial bug which cause the notifications to cease working
+
+1.2
+Fixed a bug where it doesn't show any bookmarks in International versions
+
+1.3
+Continuation of 1.2
+
+1.4
+Fixed bug when searching for non-english alphabets (symbols and foreign characters)
+Allow alt-Enter while searching to open first result in new tab
+
+1.5
+Right click launches bookmarks manager
+Allows keyboard navigation in the bookmarks bar
+
+1.6
+Added no.tify ad in options page
+Fix folder display
+
+1.7
+Added right click change bookmarks dialog
+Fixed a bug where typing too fast will cause duplicate entries in search
+Fixed bug where opening several tabs from the bar consecutively and cause renaming error
+Can now press enter key to submit a bookmark change
+
+1.8
+Removed flicker of the notification badge (slowly adding up from 0) every refresh
+Can now press esc key to quit bookmark change dialog
+Fixed a bug which cause bookmarks ceases to be renamed
+Now auto focus on the name input when dialog opens (just as the buil-in edit dialog)
+
+1.9
+Open tab on the far right when middle click on a bookmark
+Can now ctrl-click to open bookmark in a new tab
+Potential fix for erroneous bookmark renaming
+
+1.10
+Fixed bug renaming bookmarks. It's stable from my tests now, any bug reports are welcome (in the comments). 
+
+1.11
+Fixed a bug in removing bookmarks, where the bookmark name is not deleted from the storage
+Changed middle click on bookmarks to not destroy the bar (a bug brought about by Chrome's update)
+Added safety net to make sure duplicate bookmark name changes are not created
+
+1.12
+Minor bug fix
+
+1.13
+Added option "Don't change bookmark names"
+Remade Options page
+
+1.14
+Added folder support
+Added option to "Flatten folders" (enabled by default)

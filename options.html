@@ -1,0 +1,48 @@
+<!-- vim:set shiftwidth=2 tabstop=2 expandtab syntax:htmldjango: -->
+<html>
+  <head>
+    <title>Awesome Bookmarks</title>
+    <link rel="stylesheet" type="text/css" href="options.css" />
+  </head>
+  <script type="text/javascript" src="include/js/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="options.js"></script>
+  <script type="text/javascript" src="js/pref.js"></script>
+  <script type="text/javascript" src="js/notifyname.js"></script>
+<body>
+  <div id="header">
+    <img src="images/logo.png" id="logo" />
+    <span id="title">Awesome Bookmarks</span>
+    <div id="trace"></div>
+  </div>
+  <div id="separator">
+    <div id="sep_left">Awesome Bookmarks Options</div>
+    <div id="sep_right">
+      <div id="cleanBtn" class="notify">
+        <a href="#" id="cleanHeader" title="Revert bookmark names"><img src="images/revert.png" /></a>
+      </div>
+      <div id="enableBtn" class="notify">
+        <a href="#" id="cleanHeader" title="Re-enable notifications"><img src="images/enable.png" /></a>
+      </div>
+    </div>
+  </div>
+  <div id="contents">
+    <div id="options">
+      <div class="optionGroup notify">
+        <input type="checkbox" id="maintainName" /><label for="maintainName">Don't change my bookmark names (for notification)</label>
+      </div>
+      <div class="optionGroup">
+        <input type="checkbox" id="flattenFolders" /><label for="flattenFolders">Flatten folders in Bookmarks Bar</label>
+      </div>
+    </div>
+    <div id="notifyOptions" class="notify btn">
+      <a href="chrome-extension://cepkiiaikapljlmgjlipdnafoeojbepp/options.html" target="_blank">
+        <div class="btnHeader" id="notifyOptionsSmall"><img src="images/notifyicon.png" id="notifyIcon" /><br />Access notify options here</div>
+      </a>
+    </div>
+    <div id="notifyAd" class="no_notify">
+      <img src="http://lam25.projects.cs.illinois.edu/notify/promotion/19.png" /><br />
+      <span id="notifyDetails" class="btnDetails">no.tify is an extension that will make Awesome Bookmarks much more awesome. It allows you to be notified of unread Emails, new blog posts and changes in websites just as you see above. <br /><a href="https://chrome.google.com/extensions/detail/cepkiiaikapljlmgjlipdnafoeojbepp">[Download no.tify here]</a></span>
+    </div>
+  </div>
+</body>
+</html>

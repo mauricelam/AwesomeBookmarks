@@ -1,0 +1,11 @@
+body { font-size: 12px; font-family: Arial, sans-serif; background: #EEEEEE; padding: 5px; margin: 0px; }
+.right { float: right; }
+
+.infoBox { width: 300px; float: right; }
+.infoWrap { height: 30px; line-height: 30px; }
+
+#toolbar { position: fixed; bottom: 5px; width: 98%; }
+img.toolBtn { padding: 0px 3px; border: 1px solid transparent; -webkit-border-radius: 5px; }
+img.toolBtn:hover { border: 1px solid #CCCCCC; background: #DDDDDD; }
+button.toolBtn { margin: 0px 3px; }
+.toolBtn.right { width: 70px; }

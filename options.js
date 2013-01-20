@@ -72,7 +72,7 @@ function changeBookmarkName(id, title){
 
 function checkNotify(){
 	setNotify(false);
-	chrome.extension.sendRequest(notifyId, {"action": "ping"}, function(reply){
+	chrome.extension.sendMessage(notifyId, {"action": "ping"}, function(reply){
 		if(reply=="pong"){
 			setNotify(true);
 		}
@@ -115,7 +115,7 @@ function showMessage(){
 }
 
 function disable(){
-	chrome.extension.sendRequest({"action": "disable"});
+	chrome.extension.sendMessage({"action": "disable"});
 	chrome.browserAction.setBadgeBackgroundColor({"color": [0, 0, 0, 255]});
 	chrome.browserAction.setBadgeText({"text": "N/A"});
 }
@@ -124,6 +124,6 @@ function enable(showMsg){
 	if(showMsg)
 		trace("You can now continue using Awesome Bookmarks with notifications", "green");
 	chrome.browserAction.setBadgeBackgroundColor({"color": [255, 0, 0, 255]});
-	chrome.extension.sendRequest({"action": "enable"});
+	chrome.extension.sendMessage({"action": "enable"});
 }
 /*** end view ***/

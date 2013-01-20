@@ -6,14 +6,12 @@ var storedNotify = {};
 
 (function(){
 
-    var m = Notifier;
-
     var notifyId = 'cepkiiaikapljlmgjlipdnafoeojbepp';
 
-    m.loadNotification = function(node){
+    Notifier.loadNotification = function(node){
         if(node.url !== undefined){
             // ask no.tify for information
-            chrome.extension.sendRequest(notifyId, {'action': 'getNotify', 'url': node.url}, function(response){
+            chrome.extension.sendMessage(notifyId, {'action': 'getNotify', 'url': node.url}, function(response){
                 if(response && response.notify !== storedNotify[node.id]){
                     onNotifyChanged(node, node.id, response);
                     if(node.parentId !== undefined){
@@ -24,7 +22,7 @@ var storedNotify = {};
         }
         if(node.children){
             for(var i in node.children){
-                m.loadNotification(node.children[i]);
+                Notifier.loadNotification(node.children[i]);
             }
         }
     };
@@ -38,7 +36,7 @@ var storedNotify = {};
         }
     }
 
-    m.getTotalCount = function(){
+    Notifier.getTotalCount = function(){
         var total = 0;
         for(var i in myBookmarks){
             total += myBookmarks[i].notify;
@@ -108,7 +106,7 @@ $(function(){
     }, 5000);
 });
 
-chrome.extension.onRequest.addListener(function listen_request(request, sender, sendResponse){
+chrome.extension.onMessage.addListener(function listen_request(request, sender, sendResponse){
 	console.log('Internal request received');
 	if(request.action == 'refresh'){
 		if(isEnabled()){

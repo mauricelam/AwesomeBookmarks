@@ -1,6 +1,6 @@
 {
   "name": "Awesome Bookmarks",
-  "version": "1.15",
+  "version": "1.17",
   "manifest_version": 2,
   "description": "Let you quickly search through your bookmarks in a floating bookmarks bar. It can even show notifications with no.tify. ",
   "background": {
@@ -31,9 +31,9 @@
     "_execute_browser_action": {
       "suggested_key": {
         "windows": "Ctrl+Alt+B",
+        "mac": "Ctrl+Alt+B",
         "linux": "Ctrl+Alt+B",
-        "chromeos": "Ctrl+Alt+B",
-        "mac": "Ctrl+B"
+        "chromeos": "Ctrl+Alt+B"
       }
     }
   },

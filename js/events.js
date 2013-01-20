@@ -1,12 +1,14 @@
 var EventsManager = {};
 
 (function(){
-    var m = EventsManager;
-    var oldTab = null;
 
-    m.updateTimer = 0;
+    var oldTab = null;
+    EventsManager.updateTimer = 0;
 
     function onUpdate(url){
+        if (window.root === undefined)
+            return;
+
         var node = BookmarksManager.getNodeByUrl(root, url);
         if(node){
             Notifier.loadNotification(node);
@@ -14,32 +16,32 @@ var EventsManager = {};
         }
     }
     
-    m.callUpdate = function(){
+    EventsManager.callUpdate = function(){
         chrome.tabs.getSelected(null, function(tab){
             if(tab && tab.url){
                 onUpdate(tab.url);
                 oldTab = tab.url;
             }
         });
-    }
+    };
 
-    m.callRemove = function(){
+    EventsManager.callRemove = function(){
         onUpdate(oldTab);
-    }
+    };
 
-    m.createTimer = function(){
-        m.updateTimer = setInterval(function(){
+    EventsManager.createTimer = function(){
+        EventsManager.updateTimer = setInterval(function(){
             EventsManager.callUpdate();
         }, frequentQueryInterval*1000);
 
-        chrome.tabs.onRemoved.addListener(m.callRemove);
-    }
+        chrome.tabs.onRemoved.addListener(EventsManager.callRemove);
+    };
     
-    m.cancelTimer = function(){
-        clearInterval(m.updateTimer);
+    EventsManager.cancelTimer = function(){
+        clearInterval(EventsManager.updateTimer);
 
-        chrome.tabs.onRemoved.removeListener(m.callRemove);
-    }
+        chrome.tabs.onRemoved.removeListener(EventsManager.callRemove);
+    };
 
 })();
 
